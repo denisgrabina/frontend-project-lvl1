@@ -1,32 +1,33 @@
 import readlineSync from "readline-sync";
-import getUserName from "../components/getUserName";
 import isEven from "./isEven";
 
 const controller = () => {
-  let attempts = 0;
+  let iter = 0;
   let answer = "";
   const numbers = [15, 6, 7];
 
-  while (attempts < 3) {
-    for (let i = 0; i < numbers.length; i += 1) {
-      answer = readlineSync.question(`Question: ${numbers[i]}\n Your answer: `);
-      if (
-        (isEven(numbers[i]) && answer === "yes") || (!isEven(numbers[i]) && answer === "no")
-      ) {
-        console.log("Correct!");
-      }
+  const userName = readlineSync.question("May I have your name? ");
+  console.log(`Hello, ${userName}!\n`);
 
-      if (
-        (isEven(numbers[i]) && answer === "no") || (!isEven(numbers[i]) && answer === "yes")
-      ) {
-        return `'yes' is wrong answer ;(. Correct answer was 'no'.\n Let's try again, ${getUserName}!`;
-      }
-
-      return `${answer}, is not correct answer.\n ${getUserName}, please use keyword 'yes' or 'no'.`;
+  while (iter < 3) {
+    answer = readlineSync.question(`Question: ${numbers[iter]}\nYour answer: `);
+    if (
+      (isEven(numbers[iter]) && answer === "yes") || (!isEven(numbers[iter]) && answer === "no")
+    ) {
+      console.log("Correct!");
     }
-    attempts += 1;
+
+    if (!isEven(numbers[iter]) && answer === "yes") {
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`);
+    }
+    if (isEven(numbers[iter]) && answer === "no") {
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}!`);
+    }
+    // return `${answer}, is not correct answer.\n ${userName}, please use keyword 'yes' or 'no'.`;
+    iter += 1;
   }
-  return `Congratulations, ${getUserName}`;
+
+  return console.log(`Congratulations, ${userName}!`);
 };
 
 export default controller;
