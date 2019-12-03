@@ -33,7 +33,8 @@ const controller = () => {
     }
     iter += 1;
   }
-  return console.log(`Congratulations, ${userName}!`);
+  console.log(`Congratulations, ${userName}!`);
+  return false;
 };
 
 export default controller;
