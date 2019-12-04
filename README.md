@@ -2,7 +2,6 @@
 
 #### Welcome to the open source <i>CLI</i> project "Brain Games"
 
-You can install Brain Games on Windows, Mac, or Linux by downloading the package from NPM Repository:
+You can install Brain Even on Windows(Bash), Mac, or Linux by following this asciinema:
 
-```
-npm install -g brain-games-cli-app
+[![asciicast](https://asciinema.org/a/285299.svg)](https://asciinema.org/a/285299)
