@@ -1,7 +1,8 @@
 import readlineSync from "readline-sync";
-import isEven from "./isEven";
+import isEven from "../components/isEven";
 
 export default (numbers) => {
+  console.log("Answer \"yes\" if number even otherwise answer \"no\"\n");
   const userName = readlineSync.question("May I have your name? ");
   if (!userName) return console.log("User Name field couldn't be empty");
   console.log(`Hello, ${userName}!\n`);
