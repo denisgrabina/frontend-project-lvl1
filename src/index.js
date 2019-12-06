@@ -1,6 +1,11 @@
-import readlineSync from "readline-sync";
+import greetingUser from "./components/greetingUser";
+import getUserName from "./components/getUserName";
+
+const greetings = greetingUser();
 
 export default () => {
-  const userName = readlineSync.question("May I have your name? ");
-  console.log(`Hi, ${userName}!`);
+  console.log(greetings);
+  const userName = getUserName();
+  if (!userName) return console.log("User Name field couldn't be empty");
+  return console.log(`Hello, ${userName}!`);
 };

@@ -1,22 +1,22 @@
-import readlineSync from "readline-sync";
+import getRules from "../components/getRules";
+import controller from "../controllers/gameLogic";
 import isEven from "../components/isEven";
+import getRandomInt from "../components/getRandomInt";
 
-export default (numbers) => {
-  console.log("Answer \"yes\" if number even otherwise answer \"no\"\n");
-  const userName = readlineSync.question("May I have your name? ");
-  if (!userName) return console.log("User Name field couldn't be empty");
-  console.log(`Hello, ${userName}!\n`);
-
-  for (let iter = 0; iter < 3; iter += 1) {
-    const answer = readlineSync.question(`Question: ${numbers[iter]}\nYour answer: `);
-    if (!isEven(numbers[iter]) && answer === "yes") return console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`);
-    if (isEven(numbers[iter]) && answer === "no") return console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}!`);
-
-    if ((isEven(numbers[iter]) && answer === "yes") || (!isEven(numbers[iter]) && answer === "no")) {
-      console.log("Correct!");
+export default () => {
+  const rules = getRules("Answer 'yes' if number even otherwise answer 'no'\n");
+  const data = [];
+  const answers = [];
+  for (let i = 0; i < 3; i += 1) {
+    data.push(getRandomInt(100));
+  }
+  for (let i = 0; i < data.length; i += 1) {
+    if (isEven(data[i])) {
+      answers.push("yes");
     } else {
-      return console.log(`'${answer}', is not correct answer.\n${userName}, please use keyword 'yes' or 'no'.`);
+      answers.push("no");
     }
   }
-  return console.log(`Congratulations, ${userName}!`);
+
+  return controller(rules, data, answers);
 };

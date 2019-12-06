@@ -1,1 +1,1 @@
-export default () => console.log("Welcome to the Brain Games!");
+export default () => "\nWelcome to the Brain Games!";
