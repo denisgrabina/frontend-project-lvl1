@@ -1,5 +1,5 @@
 export default () => {
   const mathSymbols = ["+", "-", "*"];
 
-  return mathSymbols[Math.floor(Math.random() * Math.floor(2))];
+  return mathSymbols[Math.floor(Math.random() * Math.floor(3))];
 };
