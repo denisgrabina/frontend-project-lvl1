@@ -1,12 +1,20 @@
 export default (n1 = 1, n2 = 2, sym = "+") => {
+  const expression = `${n1} ${sym} ${n2}`;
+  let answer;
   switch (sym) {
     case "+":
-      return n1 + n2;
+      answer = n1 + n2;
+      break;
     case "-":
-      return n1 - n2;
+      answer = n1 - n2;
+      break;
     case "*":
-      return n1 * n2;
+      answer = n1 * n2;
+      break;
     default:
-      return "Please, use correct math symbol";
+      answer = "Please, use correct math symbol";
+      break;
   }
+
+  return { expression, answer };
 };
