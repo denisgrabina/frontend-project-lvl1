@@ -1,5 +1,5 @@
 import getRules from "../components/getRules";
-import calc from "../components/calc";
+import calc from "../controllers/calc";
 import getRandomInt from "../components/getRandomInt";
 import getRandomSym from "../components/getRandomSym";
 import controller from "../controllers/gameLogic";
