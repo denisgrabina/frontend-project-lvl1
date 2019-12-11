@@ -9,3 +9,8 @@ publish:
 
 lint:
 	npx eslint
+
+prepublishOnly:
+	npm run prepublishOnly
+	make publish
+	npm link
