@@ -2,6 +2,10 @@
 
 #### Welcome to the open source <i>CLI</i> project "Brain Games"
 
-You can install Brain Even on Windows(Bash), Mac, or Linux by following this asciinema:
+You can install and run Brain Games package on Windows(Bash), Mac, or Linux by following this asciinema:
 
-[![asciicast](https://asciinema.org/a/285299.svg)](https://asciinema.org/a/285299)
+***brain-even 🟩🟥***
+[![asciicast](https://asciinema.org/a/287093.svg)](https://asciinema.org/a/287093)
+
+***brain-calc 💭🔢***
+[![asciicast](https://asciinema.org/a/287091.svg)](https://asciinema.org/a/287091)
