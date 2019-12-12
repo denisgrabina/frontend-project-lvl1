@@ -8,7 +8,8 @@
     "brain-even": "dist/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js",
     "brain-gcd": "dist/bin/brain-gcd.js",
-    "brain-progression": "dist/bin/brain-progression.js"
+    "brain-progression": "dist/bin/brain-progression.js",
+    "brain-prime": "dist/bin/brain-prime.js"
   },
   "files": [
     "dist"
@@ -20,7 +21,8 @@
     "debug-even": "node -r esm src/bin/brain-even",
     "debug-calc": "node -r esm src/bin/brain-calc",
     "debug-gcd": "node -r esm src/bin/brain-gcd",
-    "debug-progression": "node -r esm src/bin/brain-progression"
+    "debug-progression": "node -r esm src/bin/brain-progression",
+    "debug-prime": "node -r esm src/bin/brain-prime"
   },
   "repository": {
     "type": "git",
