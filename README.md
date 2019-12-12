@@ -4,6 +4,9 @@
 
 You can install and run Brain Games package on Windows(Bash), Mac, or Linux by following this asciinema:
 
+***Use case of installing package with games and run them globally 🕹🌐***
+[![asciicast](https://asciinema.org/a/287494.svg)](https://asciinema.org/a/287494)
+
 ***brain-even 🟩🟥***
 [![asciicast](https://asciinema.org/a/287093.svg)](https://asciinema.org/a/287093)
 
