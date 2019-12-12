@@ -1,6 +1,10 @@
+import generateProgression from "../components/generateProgression";
+
 export default (n) => {
-  const expression = n;
-  const answer = n % 2 === 0 ? "yes" : "no";
+  const progression = generateProgression();
+  const answer = progression[n];
+  progression[n] = "..";
+  const expression = progression.join(" ");
 
   return { expression, answer };
 };
