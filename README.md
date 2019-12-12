@@ -15,3 +15,6 @@ You can install and run Brain Games package on Windows(Bash), Mac, or Linux by f
 
 ***brain-progression 🧮🔢***
 [![asciicast](https://asciinema.org/a/287415.svg)](https://asciinema.org/a/287415)
+
+***brain-prime ⌛️7️⃣***
+[![asciicast](https://asciinema.org/a/287453.svg)](https://asciinema.org/a/287453)
