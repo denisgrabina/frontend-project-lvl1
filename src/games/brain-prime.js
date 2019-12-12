@@ -9,7 +9,6 @@ export default () => {
   for (let i = 0; i < 3; i += 1) {
     data.push(prime(getRandomInt(30)));
   }
-  console.log(data);
 
   return controller(rules, data);
 };
