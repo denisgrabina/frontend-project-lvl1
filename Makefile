@@ -8,7 +8,7 @@ publish:
 	npm publish --dry-run
 
 lint:
-	npx eslint ./dist/bin/
+	npx eslint /src/bin/
 
 prepublishOnly:
 	npm run prepublishOnly
