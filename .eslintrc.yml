@@ -1,17 +1,19 @@
 ---
-  plugins: 
-    - babel
+plugins:
+  - babel
+  - prettier
 
-  env:
-    node: true
+env:
+  node: Yes
 
-  parser: babel-eslint
+parser: babel-eslint
 
-  extends:
-  	- 'airbnb-base'
+extends:
+  - airbnb
+  - prettier
 
-  rules:
-    no-console: 0
-    quotes:
-      - error
-      - double
+rules:
+  no-console: "off"
+  quotes:
+    - error
+    - double
