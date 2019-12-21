@@ -34,5 +34,5 @@ export default () => {
 		data.push(calculate(getRandomInt(100), getRandomInt(100), getRandomSym()));
 	}
 
-	controller(rules, data);
+	return controller(rules, data);
 };
