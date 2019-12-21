@@ -1,5 +1,5 @@
 #!/usr/local/bin/node
 
-import game from "../games/brain-prime";
+import game from "../games/prime";
 
 game();

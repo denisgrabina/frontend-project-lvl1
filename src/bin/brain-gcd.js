@@ -1,5 +1,5 @@
 #!/usr/local/bin/node
 
-import game from "../games/brain-gcd";
+import game from "../games/gcd";
 
 game();
