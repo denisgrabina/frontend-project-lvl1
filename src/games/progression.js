@@ -1,18 +1,18 @@
 import getRandomInt from "../getRandomInt";
 import { runGameEngine, rounds } from "..";
 
+const generateProgression = (start, length = 10, difference) => {
+	for (let i = 0; i < length; i += 1) {
+		start.push(start[i] + difference);
+	}
+	return start;
+};
+
+const progressionLength = 10;
+
 const rules = "What number is missing in the progression?\n";
 
 const generateGameData = () => {
-	const generateProgression = (start, length = 10, difference) => {
-		for (let i = 0; i < length; i += 1) {
-			start.push(start[i] + difference);
-		}
-		return start;
-	};
-
-	const progressionLength = 10;
-	
 	const questions = [];
 	const answers = [];
 
