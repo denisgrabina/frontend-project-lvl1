@@ -1,7 +1,12 @@
 import getRandomInt from "../getRandomInt";
 import { runGameEngine, rounds } from "..";
 
-const isEven = number => (number % 2 === 0 ? true : false);
+const isEven = number => {
+	if (number % 2 === 0) {
+		return true;
+	}
+	return false;
+}
 
 const rules = "Answer 'yes' if number even otherwise answer 'no'.\n";
 

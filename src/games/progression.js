@@ -1,7 +1,7 @@
 import getRandomInt from "../getRandomInt";
 import { runGameEngine, rounds } from "..";
 
-const generateProgression = (start, length = 10, difference, guessNumber) => {
+const generateProgression = (start, length = 10, difference) => {
 	for (let i = 0; i < length; i += 1) {
 		start.push(start[i] + difference);
 	}
