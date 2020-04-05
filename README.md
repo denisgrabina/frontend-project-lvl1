@@ -2,7 +2,7 @@
 
 #### Welcome to the open source <i>CLI</i> project "Brain Games"
 
-<br>
+![A beautiful mind movie](https://media.giphy.com/media/AXorq76Tg3Vte/giphy.gif)
 
 **Description**
 
