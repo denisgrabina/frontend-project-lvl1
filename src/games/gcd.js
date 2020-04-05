@@ -1,14 +1,14 @@
 import getRandomInt from "../getRandomInt";
 import { runGameEngine, rounds } from "..";
 
-const getGreatCommonDivisor = (number1, number2) => {
-	if (!number2) return number1;
-	return getGreatCommonDivisor(number2, number1 % number2);
-};
-
 const rules = "Find the greatest common divisor of given numbers.\n";
 
 const generateGameData = () => {
+	const getGreatCommonDivisor = (number1, number2) => {
+		if (!number2) return number1;
+		return getGreatCommonDivisor(number2, number1 % number2);
+	};
+
 	const questions = [];
 	const answers = [];
 

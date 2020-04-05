@@ -1,16 +1,16 @@
 import getRandomInt from "../getRandomInt";
 import { runGameEngine, rounds } from "..";
 
-const isEven = number => {
-	if (number % 2 === 0) {
-		return true;
-	}
-	return false;
-}
-
 const rules = "Answer 'yes' if number even otherwise answer 'no'.\n";
 
 const generateGameData = () => {
+	const isEven = number => {
+		if (number % 2 === 0) {
+			return true;
+		}
+		return false;
+	};
+	
 	const questions = [];
 	const answers = [];
 

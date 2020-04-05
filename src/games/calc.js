@@ -1,33 +1,33 @@
 import getRandomInt from "../getRandomInt";
 import { runGameEngine, rounds } from "..";
 
-const generateRandomOperator = () => {
-	const mathSymbols = ["+", "-", "*"];
-	return mathSymbols[Math.floor(Math.random() * Math.floor(3))];
-};
-
-const calculate = (number1, number2, operator) => {
-	let result;
-	switch (operator) {
-		case "+":
-			result = number1 + number2;
-			break;
-		case "-":
-			result = number1 - number2;
-			break;
-		case "*":
-			result = number1 * number2;
-			break;
-		default:
-			result = "Please, use correct math operator";
-			break;
-	}
-	return result;
-};
-
 const rules = "What is the result of the expression?\n";
 
 const generateGameData = () => {
+	const generateRandomOperator = () => {
+		const mathSymbols = ["+", "-", "*"];
+		return mathSymbols[Math.floor(Math.random() * Math.floor(3))];
+	};
+
+	const calculate = (number1, number2, operator) => {
+		let result;
+		switch (operator) {
+			case "+":
+				result = number1 + number2;
+				break;
+			case "-":
+				result = number1 - number2;
+				break;
+			case "*":
+				result = number1 * number2;
+				break;
+			default:
+				result = "Please, use correct math operator";
+				break;
+		}
+		return result;
+	};
+
 	const questions = [];
 	const answers = [];
 
