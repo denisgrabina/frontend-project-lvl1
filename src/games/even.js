@@ -1,15 +1,22 @@
 import getRandomInt from "../getRandomInt";
-import controller from "..";
+import { runGameEngine, rounds } from "..";
 
-const isEven = n => n % 2 ? true : false;
-const result = expression => isEven(expression) ? "yes" : "no";
+const isEven = number => (number % 2 === 0 ? true : false);
 
-export default () => {
-	const rules = "Answer 'yes' if number even otherwise answer 'no'.\n";
-	const data = [];
-	for (let i = 0; i < 3; i += 1) {
-		data.push(result(isEven(getRandomInt(100))));
+const rules = "Answer 'yes' if number even otherwise answer 'no'.\n";
+
+const generateGameData = () => {
+	const questions = [];
+	const answers = [];
+
+	for (let i = 0; i < rounds; i += 1) {
+		const number = getRandomInt(1, 100);
+
+		questions.push(number);
+		answers.push(isEven(number) ? "yes" : "no");
 	}
 
-	return controller(rules, data);
+	return { questions, answers };
 };
+
+export default () => runGameEngine(rules, generateGameData());

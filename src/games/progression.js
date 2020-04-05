@@ -1,31 +1,37 @@
 import getRandomInt from "../getRandomInt";
-import controller from "..";
+import { runGameEngine, rounds } from "..";
 
-const generateProgression = () => {
-	const progressionStart = getRandomInt(100);
-	const progression = [progressionStart];
-
-	for (let i = 0; i < 9; i += 1) {
-		progression.push(progression[i] + 2);
+const generateProgression = (start, length = 10, difference, guessNumber) => {
+	for (let i = 0; i < length; i += 1) {
+		start.push(start[i] + difference);
 	}
-	return progression;
+	return start;
 };
 
-const getProgression = n => {
-	const progression = generateProgression();
-	const answer = progression[n];
-	progression[n] = "..";
-	const expression = progression.join(" ");
+const progressionLength = 10;
 
-	return { expression, answer };
-};
+const rules = "What number is missing in the progression?\n";
 
-export default () => {
-	const rules = "What number is missing in the progression?\n";
-	const data = [];
-	for (let i = 0; i < 3; i += 1) {
-		data.push(getProgression(getRandomInt(10)));
+const generateGameData = () => {
+	const questions = [];
+	const answers = [];
+
+	for (let i = 0; i < rounds; i += 1) {
+		const progressionStart = [getRandomInt(1, 100)];
+		const progressionDifference = getRandomInt(1, 10);
+		const progressionGuessNumber = getRandomInt(1, progressionLength);
+		const progression = generateProgression(
+			progressionStart,
+			progressionLength,
+			progressionDifference
+		);
+
+		answers.push(progression[progressionGuessNumber]);
+		progression.splice(progressionGuessNumber, 1, "..");
+		questions.push(progression.join(" "));
 	}
 
-	return controller(rules, data);
+	return { questions, answers };
 };
+
+export default () => runGameEngine(rules, generateGameData());

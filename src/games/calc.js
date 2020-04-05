@@ -1,38 +1,46 @@
 import getRandomInt from "../getRandomInt";
-import controller from "..";
+import { runGameEngine, rounds } from "..";
 
-const getRandomSym = () => {
+const generateRandomOperator = () => {
 	const mathSymbols = ["+", "-", "*"];
 	return mathSymbols[Math.floor(Math.random() * Math.floor(3))];
 };
 
-const calculate = (n1 = 1, n2 = 2, sym = "+") => {
-	const expression = `${n1} ${sym} ${n2}`;
-	let answer;
-	switch (sym) {
+const calculate = (number1, number2, operator) => {
+	let result;
+	switch (operator) {
 		case "+":
-			answer = n1 + n2;
+			result = number1 + number2;
 			break;
 		case "-":
-			answer = n1 - n2;
+			result = number1 - number2;
 			break;
 		case "*":
-			answer = n1 * n2;
+			result = number1 * number2;
 			break;
 		default:
-			answer = "Please, use correct math symbol";
+			result = "Please, use correct math operator";
 			break;
 	}
-	return { expression, answer };
+	return result;
 };
 
-export default () => {
-	const rules = "What is the result of the expression?\n";
+const rules = "What is the result of the expression?\n";
 
-	const data = [];
-	for (let i = 0; i < 3; i += 1) {
-		data.push(calculate(getRandomInt(100), getRandomInt(100), getRandomSym()));
+const generateGameData = () => {
+	const questions = [];
+	const answers = [];
+
+	for (let i = 0; i <= rounds; i += 1) {
+		const number1 = getRandomInt(1, 100);
+		const number2 = getRandomInt(1, 100);
+		const operator = generateRandomOperator();
+
+		questions.push(`${number1} ${operator} ${number2}`);
+		answers.push(calculate(number1, number2, operator));
 	}
 
-	return controller(rules, data);
+	return { questions, answers };
 };
+
+export default () => runGameEngine(rules, generateGameData());

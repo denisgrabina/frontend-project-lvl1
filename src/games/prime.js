@@ -1,5 +1,5 @@
 import getRandomInt from "../getRandomInt";
-import controller from "..";
+import { runGameEngine, rounds } from "..";
 
 const isPrime = n => {
 	if (n < 2) return false;
@@ -9,19 +9,20 @@ const isPrime = n => {
 	return true;
 };
 
-const primarize = n => {
-	const expression = n;
-	const answer = isPrime(n) ? "yes" : "no";
+const rules = "Answer 'yes' if number prime otherwise answer 'no'.\n";
 
-	return { expression, answer };
-};
+const generateGameData = () => {
+	const questions = [];
+	const answers = [];
 
-export default () => {
-	const rules = "Answer 'yes' if number prime otherwise answer 'no'.\n";
-	const data = [];
-	for (let i = 0; i < 3; i += 1) {
-		data.push(primarize(getRandomInt(30)));
+	for (let i = 0; i <= rounds; i += 1) {
+		const number = getRandomInt(1, 100);
+
+		questions.push(number);
+		answers.push(isPrime(number) ? "yes" : "no");
 	}
 
-	return controller(rules, data);
+	return { questions, answers };
 };
+
+export default () => runGameEngine(rules, generateGameData());
