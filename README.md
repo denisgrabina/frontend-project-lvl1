@@ -7,21 +7,31 @@
 **Description**
 
 Package includes five games with different difficulties:
+
 - **brain-even**
-*Answer 'yes' if number even otherwise answer 'no'.*
-___
+  _Answer 'yes' if number even otherwise answer 'no'._
+
+---
+
 - **brain-calc**
-*What is the result of the expression?*
-___
+  _What is the result of the expression?_
+
+---
+
 - **brain-gcd**
-*Find the greatest common divisor of given numbers.*
-___
+  _Find the greatest common divisor of given numbers._
+
+---
+
 - **brain-progression**
-*What number is missing in the progression?*
-___
+  _What number is missing in the progression?_
+
+---
+
 - **brain-prime**
-*Answer 'yes' if number prime otherwise answer 'no'.*
-___
+  _Answer 'yes' if number prime otherwise answer 'no'._
+
+---
 
 **Example Usage**
 
@@ -33,35 +43,39 @@ cd frontend-project-lvl1
 npm install
 make prepablishOnly
 ```
+
 Run a game:
 
 ```
 brain-even
 ```
+
 or
+
 ```
 brain-calc
 ```
+
 etc.
 
 <br>
 
 Follow the asciinemas below and run brain-games wherever you want:
 
-***Use case of installing package with games and run them globally 🕹🌐***
+**_Use case of installing package with games and run them globally 🕹🌐_**
 [![asciicast](https://asciinema.org/a/287494.svg)](https://asciinema.org/a/287494)
 
-***brain-even 🟩🟥***
+**_brain-even 🟩🟥_**
 [![asciicast](https://asciinema.org/a/287093.svg)](https://asciinema.org/a/287093)
 
-***brain-calc 💭🔢***
+**_brain-calc 💭🔢_**
 [![asciicast](https://asciinema.org/a/287091.svg)](https://asciinema.org/a/287091)
 
-***brain-gcd ➗🔢***
+**_brain-gcd ➗🔢_**
 [![asciicast](https://asciinema.org/a/z9l0SGyvy3ieU0RU0VEgu3fCW.svg)](https://asciinema.org/a/z9l0SGyvy3ieU0RU0VEgu3fCW)
 
-***brain-progression 🧮🔢***
+**_brain-progression 🧮🔢_**
 [![asciicast](https://asciinema.org/a/287415.svg)](https://asciinema.org/a/287415)
 
-***brain-prime ⌛️7️⃣***
+**_brain-prime ⌛️7️⃣_**
 [![asciicast](https://asciinema.org/a/287453.svg)](https://asciinema.org/a/287453)

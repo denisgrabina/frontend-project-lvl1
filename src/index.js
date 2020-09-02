@@ -11,7 +11,7 @@ export const runGameEngine = (rules, gameData) => {
 
 	for (let iter = 0; iter < rounds; iter += 1) {
 		const answer = readlineSync.question(
-			`Question: ${gameData.questions[iter]}\nYour answer: ` 
+			`Question: ${gameData.questions[iter]}\nYour answer: `
 		);
 
 		if (answer !== String(gameData.answers[iter])) {

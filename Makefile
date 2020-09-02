@@ -10,6 +10,9 @@ publish:
 lint:
 	npx eslint src/**/**
 
+prettier:
+	npm run prettier
+
 prepublishOnly:
 	npm run prepublishOnly
 	make publish

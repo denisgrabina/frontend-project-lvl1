@@ -6,7 +6,7 @@ const isEven = number => {
 		return true;
 	}
 	return false;
-}
+};
 
 const rules = "Answer 'yes' if number even otherwise answer 'no'.\n";
 
