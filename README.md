@@ -62,20 +62,20 @@ etc.
 
 Follow the asciinemas below and run brain-games wherever you want:
 
-**_Use case of installing package with games and run them globally 🕹🌐_**
+**_Use case of installing package with games and run them globally_**
 [![asciicast](https://asciinema.org/a/287494.svg)](https://asciinema.org/a/287494)
 
-**_brain-even 🟩🟥_**
+**_brain-even_**
 [![asciicast](https://asciinema.org/a/287093.svg)](https://asciinema.org/a/287093)
 
-**_brain-calc 💭🔢_**
+**_brain-calc_**
 [![asciicast](https://asciinema.org/a/287091.svg)](https://asciinema.org/a/287091)
 
-**_brain-gcd ➗🔢_**
+**_brain-gcd_**
 [![asciicast](https://asciinema.org/a/z9l0SGyvy3ieU0RU0VEgu3fCW.svg)](https://asciinema.org/a/z9l0SGyvy3ieU0RU0VEgu3fCW)
 
-**_brain-progression 🧮🔢_**
+**_brain-progression_**
 [![asciicast](https://asciinema.org/a/287415.svg)](https://asciinema.org/a/287415)
 
-**_brain-prime ⌛️7️⃣_**
+**_brain-prime_**
 [![asciicast](https://asciinema.org/a/287453.svg)](https://asciinema.org/a/287453)

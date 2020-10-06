@@ -1,26 +1,22 @@
-import getRandomInt from "../getRandomInt";
-import { runGameEngine, rounds } from "..";
+import runGameEngine from "..";
+import getRandomInt from "../utils/getRandomInt";
 
-const getGreatCommonDivisor = (number1, number2) => {
-	if (!number2) return number1;
-	return getGreatCommonDivisor(number2, number1 % number2);
+const rules = "Find the greatest common divisor of given nums.\n";
+const range = [0, 10];
+
+const getGreatCommonDivisor = (num1, num2) => {
+	if (!num2) return num1;
+
+	return getGreatCommonDivisor(num2, num1 % num2);
 };
-
-const rules = "Find the greatest common divisor of given numbers.\n";
 
 const generateGameData = () => {
-	const questions = [];
-	const answers = [];
+	const num1 = getRandomInt(range);
+	const num2 = getRandomInt(range);
+	const question = `${num1} ${num2}`;
+	const rightAnswer = getGreatCommonDivisor(num1, num2).toString();
 
-	for (let i = 0; i <= rounds; i += 1) {
-		const number1 = getRandomInt(1, 100);
-		const number2 = getRandomInt(1, 100);
-
-		questions.push(`${number1} ${number2}`);
-		answers.push(getGreatCommonDivisor(number1, number2));
-	}
-
-	return { questions, answers };
+	return { question, rightAnswer };
 };
 
-export default () => runGameEngine(rules, generateGameData());
+export default runGameEngine(rules, generateGameData);
