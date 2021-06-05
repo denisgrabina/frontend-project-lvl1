@@ -2,8 +2,6 @@
 
 #### Welcome to the open source <i>CLI</i> project "Brain Games"
 
-![A beautiful mind movie](https://media.giphy.com/media/AXorq76Tg3Vte/giphy.gif)
-
 **Description**
 
 Package includes five games with different difficulties:
