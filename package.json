@@ -22,7 +22,6 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prettier": "prettier --write \"./**/*.*\"",
     "prepublishOnly": "npm run build",
     "debug-even": "node -r esm src/bin/brain-even",
@@ -43,10 +42,6 @@
   },
   "homepage": "https://github.com/denisgrabina/frontend-project-lvl1#readme",
   "devDependencies": {
-    "@babel/cli": "^7.13.0",
-    "@babel/core": "^7.13.8",
-    "@babel/node": "^7.13.0",
-    "@babel/preset-env": "^7.13.9",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
