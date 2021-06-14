@@ -1,60 +1,61 @@
 {
-	"name": "brain-games-app",
-	"version": "1.1.0-alpha",
-	"description": "CLI Game \"Brain games\" include 5 different games with 3 questions",
-	"keywords": [
-		"brain-even",
-		"brain-calc",
-		"brain-gcd",
-		"brain-progression",
-		"brain-prime"
-	],
-	"main": "index.js",
-	"bin": {
-		"brain-even": "dist/bin/brain-even.js",
-		"brain-calc": "dist/bin/brain-calc.js",
-		"brain-gcd": "dist/bin/brain-gcd.js",
-		"brain-progression": "dist/bin/brain-progression.js",
-		"brain-prime": "dist/bin/brain-prime.js"
-	},
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-		"prettier": "prettier --write \"./**/*.*\"",
-		"prepublishOnly": "npm run build",
-		"debug-even": "node -r esm src/bin/brain-even",
-		"debug-calc": "node -r esm src/bin/brain-calc",
-		"debug-gcd": "node -r esm src/bin/brain-gcd",
-		"debug-progression": "node -r esm src/bin/brain-progression",
-		"debug-prime": "node -r esm src/bin/brain-prime"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/denisgrabina/frontend-project-lvl1.git"
-	},
-	"author": "Denys Grabina <denistesla8@gmail.com> (https://github.com/denisgrabina/)",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/denisgrabina/frontend-project-lvl1/issues",
-		"email": "denistesla8@gmail.com"
-	},
-	"homepage": "https://github.com/denisgrabina/frontend-project-lvl1#readme",
-	"devDependencies": {
-		"@babel/cli": "^7.7.4",
-		"@babel/core": "^7.7.4",
-		"@babel/node": "^7.7.4",
-		"@babel/preset-env": "^7.7.4",
-		"babel-eslint": "^10.0.3",
-		"eslint": "^6.1.0",
-		"eslint-plugin-babel": "^5.3.0",
-		"eslint-plugin-import": "^2.19.1",
-		"esm": "^3.2.25",
-		"prettier": "1.19.1"
-	},
-	"dependencies": {
-		"readline-sync": "^1.4.10"
-	}
+  "name": "@hexlet/code",
+  "version": "1.1.0-alpha",
+  "description": "CLI Game \"Brain games\" include 5 different games with 3 questions",
+  "keywords": [
+    "brain-even",
+    "brain-calc",
+    "brain-gcd",
+    "brain-progression",
+    "brain-prime"
+  ],
+  "main": "index.js",
+  "bin": {
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js",
+    "brain-gcd": "dist/bin/brain-gcd.js",
+    "brain-progression": "dist/bin/brain-progression.js",
+    "brain-prime": "dist/bin/brain-prime.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prettier": "prettier --write \"./**/*.*\"",
+    "prepublishOnly": "npm run build",
+    "debug-even": "node -r esm src/bin/brain-even",
+    "debug-calc": "node -r esm src/bin/brain-calc",
+    "debug-gcd": "node -r esm src/bin/brain-gcd",
+    "debug-progression": "node -r esm src/bin/brain-progression",
+    "debug-prime": "node -r esm src/bin/brain-prime"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denisgrabina/frontend-project-lvl1.git"
+  },
+  "author": "Denys Grabina <denistesla8@gmail.com> (https://github.com/denisgrabina/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denisgrabina/frontend-project-lvl1/issues",
+    "email": "denistesla8@gmail.com"
+  },
+  "homepage": "https://github.com/denisgrabina/frontend-project-lvl1#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/node": "^7.13.0",
+    "@babel/preset-env": "^7.13.9",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "esm": "^3.2.25",
+    "prettier": "1.19.1"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }

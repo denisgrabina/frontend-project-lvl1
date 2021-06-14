@@ -3,30 +3,30 @@ import readlineSync from "readline-sync";
 const rounds = 3;
 
 export default (rules, gameData) => () => {
-	console.log("\nWelcome to the Brain Games!");
-	console.log(rules);
-	
-	const userName = readlineSync.question("May I have your name? ");
-	if (!userName) return console.log("User Name field couldn't be empty");
-	
-	console.log(`Hello, ${userName}!`);
+  console.log("\nWelcome to the Brain Games!");
+  console.log(rules);
 
-	for (let iter = 0; iter < rounds; iter += 1) {
-		const { question, rightAnswer } = gameData();
-		const answer = readlineSync.question(
-			`Question: ${question}\nYour answer: `
-		);
+  const userName = readlineSync.question("May I have your name? ");
+  if (!userName) return console.log("User Name field couldn't be empty");
 
-		if (answer !== rightAnswer) {
-			return console.log(
-				`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`
-			);
-		}
+  console.log(`Hello, ${userName}!`);
 
-		if (answer === rightAnswer) {
-			console.log("Correct!");
-		}
-	}
+  for (let iter = 0; iter < rounds; iter += 1) {
+    const { question, rightAnswer } = gameData();
+    const answer = readlineSync.question(
+      `Question: ${question}\nYour answer: `
+    );
 
-	return console.log(`Congratulations, ${userName}!`);
+    if (answer !== rightAnswer) {
+      return console.log(
+        `'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`
+      );
+    }
+
+    if (answer === rightAnswer) {
+      console.log("Correct!");
+    }
+  }
+
+  return console.log(`Congratulations, ${userName}!`);
 };

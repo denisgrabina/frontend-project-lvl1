@@ -7,10 +7,10 @@ const range = [1, 10];
 const isEven = num => num % 2 === 0;
 
 const generateGameData = () => {
-	const question = getRandomInt(range);
-	const rightAnswer = isEven(question) ? "yes" : "no";
+  const question = getRandomInt(range);
+  const rightAnswer = isEven(question) ? "yes" : "no";
 
-	return { question, rightAnswer };
+  return { question, rightAnswer };
 };
 
 export default runGameEngine(rules, generateGameData);
