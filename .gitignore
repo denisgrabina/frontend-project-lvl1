@@ -1,9 +1,2 @@
 node_modules
-dist
 .idea
- .idea/codeStyles/Project.xml
-        new file:   .idea/codeStyles/codeStyleConfig.xml
-        new file:   .idea/frontend-project-lvl1.iml
-        new file:   .idea/inspectionProfiles/Project_Default.xml
-        new file:   .idea/modules.xml
-        new file:   .idea/vcs.xml

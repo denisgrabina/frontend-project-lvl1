@@ -1,37 +1,37 @@
-import runGameEngine from "..";
-import getRandomInt from "../utils/getRandomInt";
+import { runGameEngine } from '../cli.js';
+import randomInt from '../utils/randomInt.js';
 
-const rules = "What is the result of the expression?\n";
+const rules = 'What is the result of the expression?\n';
 const range = [1, 10];
 
 const generateRandomOperator = () => {
-  const mathSymbols = ["+", "-", "*"];
+  const mathSymbols = ['+', '-', '*'];
 
-  return mathSymbols[getRandomInt([0, mathSymbols.length - 1])];
+  return mathSymbols[randomInt([0, mathSymbols.length - 1])];
 };
 
 const calculate = (num1, num2, operator) => {
   let result;
   switch (operator) {
-    case "+":
+    case '+':
       result = num1 + num2;
       break;
-    case "-":
+    case '-':
       result = num1 - num2;
       break;
-    case "*":
+    case '*':
       result = num1 * num2;
       break;
     default:
-      result = "Please, use correct math operator";
+      result = 'Please, use correct math operator';
       break;
   }
   return result;
 };
 
 const generateGameData = () => {
-  const num1 = getRandomInt(range);
-  const num2 = getRandomInt(range);
+  const num1 = randomInt(range);
+  const num2 = randomInt(range);
   const operator = generateRandomOperator();
   const question = `${num1}${operator}${num2}`;
   const rightAnswer = calculate(num1, num2, operator).toString();
