@@ -33,7 +33,7 @@ const generateGameData = () => {
   const num1 = randomInt(range);
   const num2 = randomInt(range);
   const operator = generateRandomOperator();
-  const question = `${num1}${operator}${num2}`;
+  const question = `${num1} ${operator} ${num2}`;
   const rightAnswer = calculate(num1, num2, operator).toString();
 
   return { question, rightAnswer };
