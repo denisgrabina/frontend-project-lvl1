@@ -19,9 +19,7 @@ const generateProgression = () => {
 const generateGameData = () => {
   const progression = generateProgression();
   const hiddenNum = randomInt([0, progressionLength - 1]);
-  const formattedProgression = progression.map(function(item, index) {
-    return index === hiddenNum ? '..' : item
-  });
+  const formattedProgression = progression.map((item, index) => (index === hiddenNum ? '..' : item));
   const question = formattedProgression.join(' ');
   const rightAnswer = progression[hiddenNum].toString();
 
