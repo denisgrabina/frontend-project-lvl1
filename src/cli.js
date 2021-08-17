@@ -19,12 +19,12 @@ export const runGameEngine = (rules, gameData) => {
   for (let iter = 0; iter < rounds; iter += 1) {
     const { question, rightAnswer } = gameData();
     const answer = readlineSync.question(
-      `Question: ${question}\nYour answer: `
+      `Question: ${question}\nYour answer: `,
     );
 
     if (answer !== rightAnswer) {
       return console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`
+        `'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`,
       );
     }
 
