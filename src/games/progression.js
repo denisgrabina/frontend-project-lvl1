@@ -12,16 +12,14 @@ const generateProgression = () => {
 
   return Array.from(
     new Array(progressionLength),
-    (item, index) => (index + start) * step
+    (item, index) => (index + start) * step,
   );
 };
 
 const generateGameData = () => {
   const progression = generateProgression();
   const hiddenNum = randomInt([0, progressionLength - 1]);
-  const formattedProgression = progression.map((item, index) => {
-    return index === hiddenNum ? '..' : item
-  });
+  const formattedProgression = progression.map((item, index) => index === hiddenNum ? '..' : item);
   const question = formattedProgression.join(' ');
   const rightAnswer = progression[hiddenNum].toString();
 
